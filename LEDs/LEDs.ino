@@ -88,6 +88,9 @@ void refresh() {
 
 void write_char(int location, char c)
 {
+  if( location <= -4 || location > 16 ) 
+    return; 
+    
   char z[5];
 
   int ci = (int) c - 32;
@@ -120,7 +123,7 @@ void write_char(int location, char c)
   }
 }
 
-char string[] = "I LOVE YOU";
+char string[] = "I LOVE YOU!";
 
 void loop() {
 
